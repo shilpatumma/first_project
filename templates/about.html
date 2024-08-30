@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,20 +9,21 @@
     <h1> ABOUT </h1>
     <p> This is about <a href="home.html"></a> page </p>
 </body>
-</html> -->
+</html>  {% endcomment %}
 
 
 
 
-
+{% load static %}
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
     <title>Home</title>  
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>  
 <body>  
-    <h2>Welcome to Django!!!  (About)</h2>  
-    <p> This is About <a href="home.html"></a> page </p>
+    <h1>About</h1>  
+    <p>Back to <a href="/">Home page</a></p>
 </body>  
 </html>  

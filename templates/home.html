@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,10 +9,13 @@
     <h1> HOME </h1>
     <p> This is Home <a href="about.html"></a> page </p>
 </body>
-</html>  -->
+</html>  
+{% endcomment %}
 
 
-<!-- <!DOCTYPE html>  
+
+
+{% comment %} <!DOCTYPE html>  
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
@@ -21,18 +24,52 @@
 <body>  
 <h2>Welcome to Django!!!</h2>  
 </body>  
-</html>   -->
+</html>   
+{% endcomment %}
 
 
 
+
+{% comment %} * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+h1 {
+    color: skyblue;
+}
+
+p {
+    color: lightpink;
+    font-size: 23px;
+}
+
+a :link {
+    color: bisque;
+} 
+{% endcomment %}
+
+
+
+
+
+
+{% load static %}
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
     <title>Home</title>  
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>  
 <body>  
-    <h2>Welcome to Django!!!  (Home)</h2>  
-    <p style="color: brown; font-size: 23px;"> This is Home---- <a href="about.html"></a> ----page </p>
+    <h1>Home</h1>  
+    <p>Back to <a href="/about">About page</a></p>
 </body>  
 </html>  

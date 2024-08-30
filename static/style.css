@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+h1 {
+    color: skyblue;
+}
+
+p {
+    color: lightpink;
+    font-size: 23px;
+}
+
+a :link {
+    color: bisque;
+}
