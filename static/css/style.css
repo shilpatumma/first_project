@@ -28,7 +28,7 @@ a :link {
 
 /* page css */
 
-* {
+/* * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -37,7 +37,6 @@ a :link {
 body {
     background-color: white;
     text-align: center;
-    /* background-image: url('feather.jpg'); */
 }
 
 .container {
@@ -61,4 +60,112 @@ h2 {
     color: white;
     font-size: 25px;
     margin: 50px;
+} */
+
+
+
+
+/* sign in and sign up page css */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    text-align: center;
+}
+
+.main {
+    border: 2px solid black;
+    background-color: white;
+}
+
+
+.container {
+    margin: 75px;
+    /* padding: 50px; */
+    border: 2px solid red;
+    display: flex;
+    position: relative;
+}
+
+.leftside {
+    padding: 20px;
+    float: left;
+    border: 1px solid #ccc;
+    /* background-color: rgb(0, 0, 56); */
+    background-color: #3786bd;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.rightside {
+    /* display: flex; */
+    padding: 20px;
+    float: left;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: 100%;
+    /* height: 100%; */
+}
+
+h1 {
+    color: white;
+    font-family: sans-serif;
+    margin: 100px;
+}
+
+p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+h2 {
+    color: black;
+    font-family: sans-serif;
+    margin: 50px;
+    font-size: 35px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+h3 {
+    color: black;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+button {
+    background-color: #3786bd;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 49%;
+    font-size: 20px;
+  }
+  
+button:hover {
+    opacity: 0.8;
+  }
+
+h4 {
+    color: black;
+    font-family: sans-serif;
+    text-align: end;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

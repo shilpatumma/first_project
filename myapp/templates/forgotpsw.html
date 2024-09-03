@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+{% load static %}
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Forgot Password page</title>  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% comment %} <div class=""> </div> {% endcomment %}
+</head>  
+<body>  
+    <div class="main">
+        <div class="container">
+
+            <div class="leftside">
+                <h1> Welcome Back </h1>
+                <p> Please login using your personal </br> information to stay connected </br> with us. </p>
+            </div>
+
+
+            <div class="rightside">
+                <h2> Forgot Password </h2>
+                
+                <label for="uname"><h3>Username</h3></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="uname"><h3>Password</h3></label>
+                <input type="text" placeholder="Password" name="psw" required>
+
+                <label for="uname"><h3>Repeat Password</h3></label>
+                <input type="text" placeholder="Repeat Password" name="rpsw" required>
+
+                <button type="submit">Submit</button>
+
+            </div>
+
+        </div>
+    </div>
+</body>  
+</html>  
