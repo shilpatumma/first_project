@@ -209,7 +209,7 @@ h3 {
 }
 
 .navbar {
-    flex: 3;
+    flex: 1;
     display: flex;
 }
 
@@ -253,4 +253,4 @@ a {
 
 ul {
     list-style-type: none;
-}
+}   
