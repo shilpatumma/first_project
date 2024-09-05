@@ -10,15 +10,15 @@ from . import views
 #     path('',views.signup),
 # ]
 
-# urlpatterns = [
-#     path('',views.signin),
-# ]
+urlpatterns = [
+    path('',views.signin),
+]
 
 # urlpatterns = [
 #     path('',views.forgotpsw),
 # ]
 
 
-urlpatterns = [
-    path('',views.menu),
-]
+# urlpatterns = [
+#     path('',views.menu),
+# ]
