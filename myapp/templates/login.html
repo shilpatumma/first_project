@@ -3,9 +3,9 @@
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
-    <title>Forgot Password page</title>  
+    <title>Sign in page</title>  
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
+
 </head>  
 <body>  
     <div class="main">
@@ -18,7 +18,7 @@
 
 
             <div class="rightside">
-                <h2> Forgot Password </h2>
+                <h2> Sign In </h2>
                 
                 <label for="uname"><h3>Username</h3></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
@@ -26,10 +26,16 @@
                 <label for="uname"><h3>Password</h3></label>
                 <input type="text" placeholder="Password" name="psw" required>
 
-                <label for="uname"><h3>Repeat Password</h3></label>
-                <input type="text" placeholder="Repeat Password" name="rpsw" required>
+                <h4> Forgot Password? </h4>
+                {% comment %} <h4> <a href="/forgotpsw.html"> Forgot Password? </h4> {% endcomment %}
 
-                <button type="submit">Submit</button>
+                <button type="submit">Login</button>
+
+                <div class="account">
+                <h5 style="color: black;
+                        font-size: 20px;
+                        margin-top: 15px;"> Don't have account? <a href="/signup.html"> Sign up </h5>
+                </div>
 
             </div>
 

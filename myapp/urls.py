@@ -6,18 +6,21 @@ from . import views
 # ]
 
 
-# urlpatterns = [
-#     path('',views.signup),
-# ]
+urlpatterns = [
+    path('signup/',views.signup),
+]
 
 urlpatterns = [
-    path('',views.signin),
+    path('',views.login),
 ]
 
 # urlpatterns = [
 #     path('',views.forgotpsw),
 # ]
 
+# urlpatterns = [
+#     path('',views.success),
+# ]
 
 # urlpatterns = [
 #     path('',views.menu),
