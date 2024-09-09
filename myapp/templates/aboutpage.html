@@ -1,0 +1,289 @@
+<!DOCTYPE html>  
+{% load static %}
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About page</title>  
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+          
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+          
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+          
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+          
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            text-transform: uppercase;
+        }
+          
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: black;
+        }
+          
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+          
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+          
+        .dropdown-content a:hover {
+            background-color: yellowgreen;
+        }
+          
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .container {
+            {% comment %} background-color: rgb(1, 71, 1); {% endcomment %}
+            background-color: black;
+            {% comment %} padding: 0 2rem; {% endcomment %}
+            padding: 20px;
+            display: flex;
+            position: relative;
+          }
+          
+          .logo-container {
+            display: flex;
+            align-items: center;
+          }
+
+          .logo-container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+          }
+        
+          h1 {
+            color: white;
+            font-size: 25px;
+        }
+        .icon {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 26px;
+            justify-content: center;
+        }
+
+        .icon1 {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            justify-content: center;
+        }
+
+        .mainpage {
+            margin: 75px;
+            {% comment %} border: 2px solid red; {% endcomment %}
+            display: flex;
+            position: relative;
+        }
+
+        .leftside-home {
+            padding: 35px;
+            float: left;
+            border: 1px solid #ccc;
+            background-color: black;
+            width: 100%;
+        }
+
+        .rightside-home {
+            padding: 20px;
+            float: left;
+            {% comment %} border: 1px solid #ccc; {% endcomment %}
+            background-color: white;
+            width: 100%;
+        }
+
+        .leftside-home1 {
+            padding: 20px;
+            float: left;
+            border: 1px solid #ccc;
+            background-color: black;
+            width: 100%;
+        }
+
+        .rightside-home1 {
+            padding: 20px;
+            float: left;
+            {% comment %} border: 1px solid #ccc; {% endcomment %}
+            background-color: white;
+            width: 100%;
+        }
+
+        .footer {
+            background-color: black;
+            padding: 50px;
+        }
+
+        .name p {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 20px;
+            word-spacing: 20px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 50px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            text-align: justify;
+            color: white;
+            font-size: 25px;
+            margin-top: 30px;
+        }
+    </style>
+    
+    
+</head>  
+<body> 
+    <div class="container">
+
+        <div class="logo-container">
+            <h1> ABC Tech </h1>
+        </div>
+
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="#news">About</a>
+
+                <div class="dropdown">
+                <button class="dropbtn"> Blog 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="#">Blog 1</a>
+                    <a href="#">Blog 2</a>
+                    <a href="#">Blog 3</a>
+                </div>
+
+                </div> 
+
+                <a href="#news">Contact </a>
+        </div>
+
+        <div class="icon">
+            <i class="fa fa-instagram" aria-hidden="true" style="padding-right: 15px;"></i>
+            <i class="fa fa-facebook-official" aria-hidden="true" style="padding-right: 15px;"></i>
+            <i class="fa fa-twitter" aria-hidden="true" style="padding-right: 15px;"></i>
+            <i class="fa fa-telegram" aria-hidden="true"></i>
+        </div>
+      
+    </div>
+
+{% comment %} main page content start {% endcomment %}
+    <div class="mainpage">
+
+        <div class="leftside-home">
+            <h1> 5m+ Trusted Our Clients </h1>
+            <h2> Modern & Digital </br> IT Solutions For Your </br> Tech Business </h2>
+            <h3> 25+ Years Of Experience In Tech Services </h3>
+        </div>
+
+        <div class="rightside-home">
+            
+        </div>
+            
+    </div>
+
+
+    <div class="mainpage">
+
+        <div class="rightside-home1">
+            
+        </div>
+
+        <div class="leftside-home1">
+            <h1> About comapny </h1>
+            <h2> Make your life </br> easier with help </br> from ABCTech </h2>
+            <h3> - Professional Team Member</h3>
+            <h3> - Award Winning IT Solutions Company</h3>
+            <h3> - Dedicated Tech Services</h3>
+        </div>
+            
+    </div>
+{% comment %} main page content end {% endcomment %}
+
+
+{% comment %} footer content start {% endcomment %}
+
+<div class="footer">
+    
+    <div class="icon1">
+        <i class="fa fa-instagram" aria-hidden="true" style="padding-right: 15px;"></i>
+        <i class="fa fa-facebook-official" aria-hidden="true" style="padding-right: 15px;"></i>
+        <i class="fa fa-twitter" aria-hidden="true" style="padding-right: 15px;"></i>
+        <i class="fa fa-telegram" aria-hidden="true"></i>
+    </div>
+
+    <div class="name">
+        <p> Home  About  Blog  Contact </p>
+    </div>
+
+    <div class="logo-container1">
+        <h1> ABC Tech </h1>
+    </div>
+    
+</div>
+
+{% comment %} footer content end {% endcomment %}
+</body>  
+</html>  
