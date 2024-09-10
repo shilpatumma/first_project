@@ -1,0 +1,73 @@
+<!DOCTYPE html>  
+{% load static %}
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About template</title>  
+
+</head>  
+<body>  
+
+    <h1 style="text-align: center;"> About Page </h1>
+    <h2 style="text-align: center;"> <a href="/"> Home </h2>
+
+        {% comment %} {% extends 'base.html' %}
+        {% block content %}
+        <h1>About</h1>
+        {% endblock content %} {% endcomment %}
+
+
+
+    {% comment %} <h1 style="text-align: center;"> Home Page </h1>
+    <h2 style="text-align: center;"> <a href="/about_template">About </a> </h2> {% endcomment %}
+
+
+
+{% comment %} using for loop {% endcomment %}
+    
+    {% comment %} {% for post in posts %}
+
+        <h2 style="text-size: 25px;"> {{ post.title }} </h2>
+        <big> Published on {{ post.published_at }} by {{ post.author }} </big>
+        <p> {{ post.comment }} </p>
+        
+    {% endfor %} {% endcomment %}
+{% comment %} </br>
+</br>
+</br> {% endcomment %}
+
+
+
+{% comment %} using if, else and for loop {% endcomment %}
+    
+    {% comment %} {% for post in posts %}
+
+    <h2 style="text-size: 25px;"> {{ post.title }} </h2>
+    <big> Published on {{ post.published_at }} by {{ post.author }} </big>
+    <p> {{ post.comment }} </p>
+
+    {% endfor %} {% endcomment %}
+
+
+
+{% comment %} extend base template {% endcomment %}
+
+    {% comment %} {% extends 'base.html' %}
+
+    {% block content %}
+
+        <h1> My Posts </h1>
+    {% for post in posts %}
+
+        <h2 style="text-size: 25px;"> {{ post.title }} </h2>
+        <big> Published on {{ post.published_at }} by {{ post.author }} </big>
+        <p> {{ post.comment }} </p>
+
+    {% endfor %}
+
+    {% endblock %} {% endcomment %}
+
+
+</body>  
+</html>  

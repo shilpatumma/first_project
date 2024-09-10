@@ -16,19 +16,51 @@ from django.shortcuts import render
 #     return render(request, "success.html")
 
 
+
 # def web(request):
 #     return render(request, "web.html")
 
-# def aboutpage(request):
-#     return render(request, "aboutpage.html")
+# def about_webpage(request):
+#     return render(request, "about_webpage.html")
 
 
 
 
+# def base(request):
+#     return render(request, "blog/base.html")
+
+# def home_template(request):
+#     return render(request, "blog/home_template.html")
+
+# def about_template(request):
+#     return render(request, "blog/about_template.html")
 
 
-def web(request):
-    return render(request, "web.html")
+posts = [
+    {
+        'title': 'War and Peace',
+        'author': 'Leo Tolstoy',
+        'content': 'War and Peace',
+        'published_at': '1867'
+    },
 
-def aboutpage(request):
-    return render(request, "aboutpage.html")
+    {
+        'title': 'Time Machine',
+        'author': 'H.G Wells',
+        'content': 'Time Machine',
+        'published_at': '1895'
+    }
+]
+
+def base(request):
+    return render(request, "blog/base.html")
+
+def home_template(request):
+    context = {
+        'posts' : posts,
+        'title' : 'Django'
+    }
+    return render(request, "blog/home_template.html", context)
+
+def about_template(request):
+    return render(request, "blog/about_template.html")
