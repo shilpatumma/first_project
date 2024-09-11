@@ -1,4 +1,23 @@
-<!DOCTYPE html>  
+{% extends 'blog/base.html' %}
+
+    {% block content %}
+        <h1>About</h1>
+        <p><a href="/"> Visit Home Page </a></p> 
+
+        <h2> War and Peace </h2>
+        <p> War and Peace is a literary work by Russian author Leo Tolstoy. </br>
+            Set during the Napoleonic Wars, the work mixes fictional narrative with chapters discussing history and philosophy. </br>
+            An early version was published serially beginning in 1865, after which the entire book was rewritten and published in 1869. </p>
+
+        <h2> Time Machine </h2>
+        <p> The Time Machine is an 1895 dystopian post-apocalyptic science fiction novella by H. G. Wells about a Victorian scientist known as the Time Traveller who travels approximately 800,806 years into the future.  </p>
+    {% endblock content %}
+
+
+
+
+
+{% comment %} <!DOCTYPE html>  
 {% load static %}
 <html lang="en">  
 <head>  
@@ -12,62 +31,13 @@
     <h1 style="text-align: center;"> About Page </h1>
     <h2 style="text-align: center;"> <a href="/"> Home </h2>
 
-        {% comment %} {% extends 'base.html' %}
-        {% block content %}
-        <h1>About</h1>
-        {% endblock content %} {% endcomment %}
+        {% extends 'base.html' %}
+            {% block content %}
+                <h1>About</h1>
+            {% endblock content %}
 
 
-
-    {% comment %} <h1 style="text-align: center;"> Home Page </h1>
-    <h2 style="text-align: center;"> <a href="/about_template">About </a> </h2> {% endcomment %}
-
-
-
-{% comment %} using for loop {% endcomment %}
-    
-    {% comment %} {% for post in posts %}
-
-        <h2 style="text-size: 25px;"> {{ post.title }} </h2>
-        <big> Published on {{ post.published_at }} by {{ post.author }} </big>
-        <p> {{ post.comment }} </p>
-        
-    {% endfor %} {% endcomment %}
-{% comment %} </br>
-</br>
-</br> {% endcomment %}
-
-
-
-{% comment %} using if, else and for loop {% endcomment %}
-    
-    {% comment %} {% for post in posts %}
-
-    <h2 style="text-size: 25px;"> {{ post.title }} </h2>
-    <big> Published on {{ post.published_at }} by {{ post.author }} </big>
-    <p> {{ post.comment }} </p>
-
-    {% endfor %} {% endcomment %}
-
-
-
-{% comment %} extend base template {% endcomment %}
-
-    {% comment %} {% extends 'base.html' %}
-
-    {% block content %}
-
-        <h1> My Posts </h1>
-    {% for post in posts %}
-
-        <h2 style="text-size: 25px;"> {{ post.title }} </h2>
-        <big> Published on {{ post.published_at }} by {{ post.author }} </big>
-        <p> {{ post.comment }} </p>
-
-    {% endfor %}
-
-    {% endblock %} {% endcomment %}
 
 
 </body>  
-</html>  
+</html>   {% endcomment %}

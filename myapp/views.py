@@ -3,6 +3,8 @@ from django.shortcuts import render
 # def page(request):
 #     return render(request, "page.html")
 
+
+
 # def login(request):
 #     return render(request, "login.html")
 
@@ -23,17 +25,6 @@ from django.shortcuts import render
 # def about_webpage(request):
 #     return render(request, "about_webpage.html")
 
-
-
-
-# def base(request):
-#     return render(request, "blog/base.html")
-
-# def home_template(request):
-#     return render(request, "blog/home_template.html")
-
-# def about_template(request):
-#     return render(request, "blog/about_template.html")
 
 
 posts = [
@@ -58,7 +49,7 @@ def base(request):
 def home_template(request):
     context = {
         'posts' : posts,
-        'title' : 'Django'
+        'title' : 'Home'
     }
     return render(request, "blog/home_template.html", context)
 

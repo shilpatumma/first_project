@@ -6,10 +6,15 @@
     <title>Success</title>  
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
+    <style>
+        #success_tic .page-body {
+            max-width: 400px;
+            background-color: #e6e6e6;
+            margin: 10% auto;
+        }
+    </style>
 </head>  
 <body>  
-    
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#success_tic">Open Modal</button>
 
 <!-- Modal -->
     <div id="success_tic" class="modal fade" role="dialog">
@@ -17,11 +22,11 @@
 
     <!-- Modal content-->
         <div class="modal-content">
-            <a class="close" href="#" data-dismiss="modal">&times;</a>
+            {% comment %} <a class="close" href="#" data-dismiss="modal">&times;</a> {% endcomment %}
         <div class="page-body">
         <div class="head">  
-            <h3 style="margin-top:5px;">Lorem ipsum dolor sit amet</h3>
-            <h4>Lorem ipsum dolor sit amet</h4>
+            {% comment %} <h3 style="margin-top:5px;">Lorem ipsum dolor sit amet</h3>
+            <h4>Lorem ipsum dolor sit amet</h4> {% endcomment %}
         </div>
 
         <h1 style="text-align:center;">

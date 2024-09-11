@@ -1,16 +1,46 @@
-<!DOCTYPE html>  
-{% load static %}
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {% if title %} {{ title }} {% else %} Blog {% endif %} </title> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        {% if title %}
+            {{ title }}
+        {% else %}
+            About
+        {% endif %}
+    </title>
 
-</head>  
-<body>  
-
+    <style>
+        h1 {
+            text-align: center;
+            font-weight: bolder;
+            font-family: system-ui;
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-top: 50px;
+            color: brown;
+        }
+        h3 {
+            font-size: 24px;
+            text-align: center;
+            color: tomato;
+        }
+        p {
+            font-size: 24px;
+            text-align: center;
+            color: seagreen;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
     {% block content %}
- {% endblock %}
-
-</body>  
-</html>  
+    {% endblock %}
+</body>
+</html>

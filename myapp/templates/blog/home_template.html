@@ -1,4 +1,22 @@
-<!DOCTYPE html>  
+{% extends 'blog/base.html' %}
+
+    {% block content %}
+        <h1>Home Page</h1>
+        <p><a href="/about_template"> Visit About Page </a></p> 
+
+        {% for post in posts%}
+            <h2>{{ post.title }}</h2>
+            <h3>Published on {{ post.published_at }} by {{ post.author}}</h3>
+            <p>{{ post.content }}</p>
+        {% endfor%}
+
+    {% endblock %}
+
+
+
+{% comment %} <!DOCTYPE html>  
+
+{%extends 'base.html'%}
 {% load static %}
 <html lang="en">  
 <head>  
@@ -6,26 +24,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% comment %} <title>Home template</title>   {% endcomment %}
     {% comment %} <title> Blog </title>   {% endcomment %}
-    <title> {% if title %} {{ title }} {% else %} Blog {% endif %} </title>  
-
-</head>  
-<body>  
-
-    <h1 style="text-align: center;"> Home Page </h1>
-    <h2 style="text-align: center;"> <a href="/about_template">About </a> </h2>
+    {% comment %} <title> {% if title %} {{ title }} {% else %} Blog {% endif %} </title>   {% endcomment %}
 
 
-    {% comment %} {% extends 'base.html' %}
-        {% block content %}
-            <h1>My Posts</h1>
-        {% for post in posts%}
-            <h2>{{ post.title }}</h2>
-            <small>Published on {{ post.published_at }} by 
-            {{ post.author}}</small>
-            <p>{{ post.content }}</p>
-        {% endfor%}
-    {% endblock %} {% endcomment %}
+
+    {% comment %} <h1 style="text-align: center;"> Home Page </h1>
+    <h2 style="text-align: center;"> <a href="/about_template">About </a> </h2> {% endcomment %}
 
 
-</body>  
-</html>  
+{% comment %}...... using for loop ......{% endcomment %}
+    
+    {% comment %} {% for post in posts %}
+
+        <h2 style="text-size: 25px;"> {{ post.title }} </h2>
+        <big> Published on {{ post.published_at }} by {{ post.author }} </big>
+        <p> {{ post.comment }} </p>
+        
+    {% endfor %} {% endcomment %}
+    {% comment %} 
+    </br>
+    </br>
+    </br> {% endcomment %}
+
+
+
+{% comment %}...... using if, else and for loop ...... {% endcomment %}
+    
+    {% comment %} {% for post in posts %}
+
+        <h2 style="text-size: 25px;"> {{ post.title }} </h2>
+        <big> Published on {{ post.published_at }} by {{ post.author }} </big>
+        <p> {{ post.comment }} </p>
+
+    {% endfor %} {% endcomment %}
