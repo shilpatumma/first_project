@@ -23,8 +23,15 @@ from . import views
 # ]
 
 
+# urlpatterns = [
+#     path('',views.home_template),
+#     path('about_template/',views.about_template),
+#     path('base/', views.base),
+# ]
+
+
+
 urlpatterns = [
-    path('',views.home_template),
-    path('about_template/',views.about_template),
-    path('base/', views.base),
+    path('',views.std),
+    path('success/', views.success),
 ]
