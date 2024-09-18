@@ -17,10 +17,10 @@ from . import views
 
 
 
-# urlpatterns = [
-#     path('',views.web),
-#     path('about_webpage/',views.about_webpage),
-# ]
+urlpatterns = [
+    path('',views.web),
+    path('about_webpage/',views.about_webpage),
+]
 
 
 # urlpatterns = [
@@ -31,7 +31,7 @@ from . import views
 
 
 
-urlpatterns = [
-    path('',views.std),
-    path('success/', views.success),
-]
+# urlpatterns = [
+#     path('',views.std),
+#     path('std_list/', views.std_list ,name='page'),
+# ]

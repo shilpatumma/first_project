@@ -1,0 +1,29 @@
+{% extends 'std.html' %}
+
+{% block title %}
+Student List
+{% endblock %}
+
+
+{% block content %}
+
+    <section>
+        <h1>Student List</h1>
+
+        {% for post in posts %}
+
+            <article class= "Post">
+                <h2>
+                    <a href= "{%  url 'myapp:page' %}">
+                        {{ post.title }}
+                    </a>
+                </h2>
+
+                <p> {{ post.firstname }} and {{ post.lastname }} </p>
+                <p> {{ post.email }}, {{ post.address }} and  {{ post.age }} </p>
+            </article>
+
+        {% endfor %}
+    </section>
+
+{% endblock %}

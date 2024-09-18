@@ -1,11 +1,17 @@
 from django.shortcuts import render
 
-from.models import Student
+# from.models import Student
 
 
-def std(request):
-    student = Student.objects.all()
-    return render(request, "std.html", {'student': student})
+# def std(request):
+#     student = Student.objects.all()
+#     return render(request, "std.html", {'studen': student})
+
+# def std_list(request):
+#     student = Student.objects.all()
+#     return render(request, "std_list.html", {'student': student})
+
+
 
 # def page(request):
 #     return render(request, "page.html")
@@ -21,16 +27,16 @@ def std(request):
 # def forgotpsw(request):
 #     return render(request, "forgotpsw.html")
 
-def success(request):
-    return render(request, "success.html")
+# def success(request):
+#     return render(request, "success.html")
 
 
 
-# def web(request):
-#     return render(request, "web.html")
+def web(request):
+    return render(request, "web.html")
 
-# def about_webpage(request):
-#     return render(request, "about_webpage.html")
+def about_webpage(request):
+    return render(request, "about_webpage.html")
 
 
 

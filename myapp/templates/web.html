@@ -16,7 +16,7 @@
         }
         
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif; 
         }
           
         .navbar {
@@ -84,9 +84,7 @@
         }
         
         .container {
-            {% comment %} background-color: rgb(1, 71, 1); {% endcomment %}
             background-color: black;
-            {% comment %} padding: 0 2rem; {% endcomment %}
             padding: 20px;
             display: flex;
             position: relative;
@@ -108,13 +106,29 @@
             font-size: 26px;
         }
         .mainpage {
-            height: 700px;
+            height: 580px;
             color: black;
-            background-color: beige;
+            background-color: beige; 
+            background-image: url("/static/images/download1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .main_content {
+            padding-top: 200px;
         }
         p {
+            font-weight: bolder;
+            text-align: center;
+            font-size: 35px;
+            padding-top: 30px;
+        }
+
+        h5 {
+            font-weight: bolder;
             text-align: center;
             font-size: 20px;
+            word-spacing: 10px;
+            letter-spacing: 5px;
         }
 
         .footer {
@@ -150,7 +164,7 @@
 </head>  
 <body> 
     <div class="container">
-
+        
         <div class="logo-container">
             <h1> ABC Tech </h1>
         </div>
@@ -185,36 +199,10 @@
     </div>
 
     <div class="mainpage">
-        <p>
-            </br>
-            </br>
-            </br>
-            When God created teachers,</br>
-        He gave us special friends</br>
-        To help us understand His world</br>
-        And truly comprehend</br>
-        The beauty and the wonder</br>
-        Of everything we see,</br>
-    </br>
-        And become a better person</br>
-        With each discovery.</br>
-        When God created teachers,</br>
-    </br>
-        He gave us special guides</br>
-        To show us ways in which to grow</br>
-        So we can all decide</br>
-        How to live and how to do</br>
-        What’s right instead of wrong,</br>
-    </br>
-        To lead us so that we can lead</br>
-        And learn how to be strong.</br>
-        Why God created teachers,</br>
-    </br>
-        In His wisdom and His grace,</br>
-    </br>
-        Was to help us learn to make our world</br>
-        A better and wiser place.
-        </p>
+        <div class="main_content">
+            <h5> PREPARE FOR NEW FUTURE </h5>
+            <p> Helping customers be their <br> best in the moments that <br> matter. </p>       
+        </div>
     </div>
 
     {% comment %} footer content start {% endcomment %}
