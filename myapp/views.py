@@ -1,8 +1,6 @@
 from django.shortcuts import render
 
 # from.models import Student
-
-
 # def std(request):
 #     student = Student.objects.all()
 #     return render(request, "std.html", {'studen': student})
@@ -10,6 +8,7 @@ from django.shortcuts import render
 # def std_list(request):
 #     student = Student.objects.all()
 #     return render(request, "std_list.html", {'student': student})
+
 
 
 
@@ -32,11 +31,11 @@ from django.shortcuts import render
 
 
 
-def web(request):
-    return render(request, "web.html")
+# def web(request):
+#     return render(request, "web.html")
 
-def about_webpage(request):
-    return render(request, "about_webpage.html")
+# def about_webpage(request):
+#     return render(request, "about_webpage.html")
 
 
 
@@ -68,3 +67,19 @@ def about_webpage(request):
 
 # def about_template(request):
 #     return render(request, "blog/about_template.html")
+
+
+
+
+from .models import Post
+
+def post_home(request):
+    posts = Post.objects.all()
+    context = {'posts': posts}
+    return render(request, 'blog/post_home.html', context)
+
+def post_about(request):
+    return render(request, 'blog/post_about.html')
+    
+def base(request):
+    return render(request, "blog/base.html")

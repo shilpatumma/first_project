@@ -84,9 +84,9 @@
         }
         
         .container {
-            {% comment %} background-color: rgb(1, 71, 1); {% endcomment %}
+            /* background-color: rgb(1, 71, 1); */
             background-color: black;
-            {% comment %} padding: 0 2rem; {% endcomment %}
+            /* padding: 0 2rem; */
             padding: 20px;
             display: flex;
             position: relative;
@@ -124,43 +124,56 @@
             justify-content: center;
         }
 
-        .mainpage {
-            margin: 75px;
+        .mainpage1 {
+            padding-left: 50px;
+            padding-top: 50px;
             /* border: 2px solid red; */
             display: flex;
             position: relative;
         }
 
+        .mainpage2 {
+            padding-right: 50px;
+            padding-top: 50px;
+            /* border: 2px solid red; */
+            display: flex;
+            position: relative;
+            padding-bottom: 50px;
+        }
+
         .leftside-home {
             padding: 35px;
             float: left;
-            border: 1px solid #ccc;
             background-color: black;
-            width: 100%;
+            width: 50%;
+        }
+
+        .maincontent {
+            background-image: url("/static/images/download1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content_box {
+
         }
 
         .rightside-home {
             padding: 20px;
             float: left;
-            {% comment %} border: 1px solid #ccc; {% endcomment %}
-            background-color: white;
-            width: 100%;
+            width: 50%;
         }
 
         .leftside-home1 {
             padding: 20px;
             float: left;
-            border: 1px solid #ccc;
             background-color: black;
-            width: 100%;
+            width: 50%;
         }
 
         .rightside-home1 {
             padding: 20px;
-            float: left;
-            /* border: 1px solid #ccc; */
-            background-color: white;
-            width: 100%;
+            float: left;           
+            width: 50%;
         }
 
         .footer {
@@ -230,36 +243,36 @@
     </div>
 
 {% comment %} main page content start {% endcomment %}
-    <div class="mainpage">
+<div class="maincontent">
+    <div class="content_box">
+        <div class="mainpage1">
 
-        <div class="leftside-home">
-            <h1> 5m+ Trusted Our Clients </h1>
-            <h2> Modern & Digital </br> IT Solutions For Your </br> Tech Business </h2>
-            <h3> 25+ Years Of Experience In Tech Services </h3>
+            <div class="leftside-home">
+                <h1> 5m+ Trusted Our Clients </h1>
+                <h2> Modern & Digital </br> IT Solutions For Your </br> Tech Business </h2>
+                <h3> 25+ Years Of Experience In Tech Services </h3>
+            </div>
+
+            <div class="rightside-home"></div>
+                
         </div>
 
-        <div class="rightside-home">
-            
+
+        <div class="mainpage2">
+
+            <div class="rightside-home1"></div>
+
+            <div class="leftside-home1">
+                <h1> About comapny </h1>
+                <h2> Make your life </br> easier with help </br> from ABCTech </h2>
+                <h3> - Professional Team Member</h3>
+                <h3> - Award Winning IT Solutions Company</h3>
+                <h3> - Dedicated Tech Services</h3>
+            </div>
+                
         </div>
-            
     </div>
-
-
-    <div class="mainpage">
-
-        <div class="rightside-home1">
-            
-        </div>
-
-        <div class="leftside-home1">
-            <h1> About comapny </h1>
-            <h2> Make your life </br> easier with help </br> from ABCTech </h2>
-            <h3> - Professional Team Member</h3>
-            <h3> - Award Winning IT Solutions Company</h3>
-            <h3> - Dedicated Tech Services</h3>
-        </div>
-            
-    </div>
+</div>
 {% comment %} main page content end {% endcomment %}
 
 
