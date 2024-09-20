@@ -1,12 +1,24 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/layout.html' %}
 
     {% block content %}
-        <h1>My Posts</h1>
+        <div class= "box">
+            <h1>My Posts</h1>
 
-        {% for post in posts %}
-            <h2>{{ post.title }}</h2>
-            <small>Published on {{ post.published_at | date:"M, d, Y" }} by {{ post.author | title}}</small>
-            <p>{{ post.content }}</p>
-        {% endfor %}
+            {% for post in posts %}
+            <article class="post">
+    <h2>
+        {% if post.slug %}
+            <a href="{% url 'myapp:page' slug=post.slug %}">
+                {{ post.title }}
+            </a>
+        {% else %}
+            {{ post.title }}  <!-- Or provide a default behavior -->
+        {% endif %}
+    </h2>
+    <h3>Published on {{ post.published_at | date:"M, d, Y" }} by {{ post.author | title}}</h3>
+    <p>{{ post.content }}</p>
+</article>
+{% endfor %}
+        </div>
 
     {% endblock content %}

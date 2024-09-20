@@ -70,16 +70,15 @@ from django.shortcuts import render
 
 
 
-
 from .models import Post
 
 def post_home(request):
     posts = Post.objects.all()
-    context = {'posts': posts}
-    return render(request, 'blog/post_home.html', context)
+    return render(request, 'blog/post_home.html', {'posts': posts})
 
-def post_about(request):
-    return render(request, 'blog/post_about.html')
+def post_about(request, slug):
+    post = Post.objects.get(slug=slug)
+    return render(request, 'blog/post_about.html', {'post':post})
     
-def base(request):
-    return render(request, "blog/base.html")
+def layout(request):
+    return render(request, "blog/layout.html")

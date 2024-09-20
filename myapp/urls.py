@@ -39,9 +39,10 @@ from django.contrib import admin
 # ]
 
 
+app_name = 'myapp'
 
 urlpatterns = [
-    path('',views.post_home),
-    path('post_about/',views.post_about),
-    path('base/', views.base),
+    path('', views.post_home, name = "list"),
+    path('layout/', views.layout),
+    path('<slug:slug>', views.post_about, name= "page"),
 ]
