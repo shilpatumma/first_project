@@ -1,20 +1,25 @@
 {% extends 'blog/layout.html' %}
 
+{% block title %}
+    Post Home page
+{% endblock %}
+
     {% block content %}
         <div class= "box">
             <h1>My Posts</h1>
 
             {% for post in posts %}
             <article class="post">
-    <h2>
-        {% if post.slug %}
-            <a href="{% url 'myapp:page' slug=post.slug %}">
+        <h2>
+            {% if post.slug %}
+                <a href="{% url 'myapp:page' slug=post.slug %}">
+                    {{ post.title }}
+                </a>
+            {% else %}
                 {{ post.title }}
-            </a>
-        {% else %}
-            {{ post.title }}  <!-- Or provide a default behavior -->
-        {% endif %}
-    </h2>
+            {% endif %}
+        </h2>
+
     <h3>Published on {{ post.published_at | date:"M, d, Y" }} by {{ post.author | title}}</h3>
     <p>{{ post.content }}</p>
 </article>

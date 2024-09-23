@@ -26,7 +26,7 @@ class Post(models.Model):
     author = models.CharField(max_length=50, default=False)
 
 class Meta:
-        db_table = 'post'
+    db_table = 'post'
 
 def __str__(self):
     return self.title

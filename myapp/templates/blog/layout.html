@@ -23,7 +23,7 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
-            flex: 1;
+            width: 60%;
         }
           
         .navbar a {
@@ -90,12 +90,13 @@
             position: relative;
           }
           
-          .logo-container {
+          .logo {
             display: flex;
             align-items: center;
+            width: 20%;
           }
         
-          .logo-container h1 {
+          .logo h1 {
             color: white;
             font-size: 30px;
         }
@@ -109,6 +110,7 @@
             align-items: center;
             color: white;
             font-size: 26px;
+            width: 20%;
         }
 
         .footer {
@@ -175,6 +177,18 @@
             margin: 20px;
             height: 400px;
         }
+
+
+        /* media query start */
+        @media (max-width: 769px) {
+            .logo h1 {
+                font-size: 26px;
+            }
+            .icon {
+                font-size: 23px;
+            }
+        }
+        /* media query end */
     </style>
     
     
@@ -182,13 +196,13 @@
 <body> 
     <div class="container">
         
-        <div class="logo-container">
+        <div class="logo">
             <h1> ABC Tech </h1>
         </div>
 
         <div class="navbar">
             <a href="#">Home</a>
-            <a href="/about_webpage">About</a>
+            <a href="#">About</a>
 
                 <div class="dropdown">
                 <button class="dropbtn"> Blog 

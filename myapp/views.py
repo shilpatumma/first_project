@@ -78,7 +78,7 @@ def post_home(request):
 
 def post_about(request, slug):
     post = Post.objects.get(slug=slug)
-    return render(request, 'blog/post_about.html', {'post':post})
+    return render(request, 'blog/post_about.html', {'post': post})
     
 def layout(request):
     return render(request, "blog/layout.html")

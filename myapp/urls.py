@@ -44,5 +44,5 @@ app_name = 'myapp'
 urlpatterns = [
     path('', views.post_home, name = "list"),
     path('layout/', views.layout),
-    path('<slug:slug>', views.post_about, name= "page"),
+    path('blog/post_about/<slug:slug>', views.post_about, name= "page"),
 ]
