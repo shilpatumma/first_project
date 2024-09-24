@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 # from.models import Student
 # def std(request):
@@ -61,7 +61,7 @@ from django.shortcuts import render
 # def home_template(request):
 #     context = {
 #         'posts' : posts,
-#         'title' : 'Home'
+#         'title' : Home,
 #     }
 #     return render(request, "blog/home_template.html", context)
 
@@ -70,15 +70,19 @@ from django.shortcuts import render
 
 
 
-from .models import Post
+# from .models import Post
 
-def post_home(request):
-    posts = Post.objects.all()
-    return render(request, 'blog/post_home.html', {'posts': posts})
+# def post_home(request):
+#     posts = Post.objects.all()
+#     return render(request, 'blog/post_home.html', {'posts': posts})
 
-def post_about(request, slug):
-    post = Post.objects.get(slug=slug)
-    return render(request, 'blog/post_about.html', {'post': post})
+# def post_about(request, id):
+#     post = get_object_or_404(Post, id = id)
+#     return render(request, 'blog/post_about.html', {'post': post})
     
-def layout(request):
-    return render(request, "blog/layout.html")
+# def layout(request):
+    # return render(request, "blog/layout.html")
+
+
+def form(request):
+    return render(request, "blog/form.html")

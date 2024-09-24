@@ -5,62 +5,10 @@
 {% endblock %}
 
     {% block content %}
-        <div class= "box">
-            <h1>War and Peace</h1>
-
-            <p> War and Peace opens in the Russian city of St. Petersburg in 1805, as Napoleon’s conquest of <br>
-                western Europe is just beginning to stir fears in Russia. Many of the novel’s characters are <br>
-                introduced at a society hostess’s party, among them Pierre Bezukhov, the socially awkward but <br>
-                likeable illegitimate son of a rich count, and Andrew Bolkonski, the intelligent and ambitious <br>
-                son of a retired military commander. We also meet the sneaky and shallow Kuragin family, <br>
-                including the wily father Vasili, the fortune-hunter son Anatole, and the ravishing daughter <br>
-                Helene. We are introduced to the Rostovs, a noble Moscow family, including the lively daughter <br>
-                Natasha, the quiet cousin Sonya, and the impetuous son Nicholas, who has just joined the <br>
-                army led by the old General Kutuzov. 
-            
-                The Russian troops are mobilized in alliance with the Austrian empire, which is currently <br>
-                resisting Napoleon’s onslaught. Both Andrew and Nicholas go to the front. Andrew is wounded <br>
-                at the Battle of Austerlitz, and though he survives, he is long presumed dead. Pierre is made <br>
-                sole heir of his father’s fortune and marries Helene Kuragina in a daze. Helene cheats on Pierre, <br>
-                and he challenges her seducer to a duel in which Pierre nearly kills the man.
-            
-                Andrew’s wife, Lise, gives birth to a son just as Andrew arrives home to his estate, much to the <br>
-                shock of his family. Lise dies in childbirth, leaving Andrew’s devout sister Mary to raise the son. <br>
-                Meanwhile, Pierre, disillusioned by married life, leaves his wife and becomes involved with the <br>
-                spiritual practice of Freemasonry. He attempts to apply the practice’s teachings to his estate <br>
-                management, and share these teachings with his skeptical friend Andrew, who is doing work to <br>
-                help reform the Russian government
-            
-                Meanwhile, the Rostov family’s fortunes are failing, thanks in part to Nicholas’s gambling debts. <br>
-                The Rostovs consider selling their beloved family estate, Otradnoe. Nicholas is encouraged to <br>
-                marry a rich heiress, despite his earlier promise to marry Sonya. Nicholas’s army career <br>
-                continues, and he witnesses the great peace between Napoleon and Tsar Alexander. Natasha <br>
-                grows up, attends her first ball, and falls in love with various men before becoming seriously <br>
-                attached to Andrew. Andrew’s father objects to the marriage, and requires Andrew to wait a <br>
-                year before wedding Natasha. Natasha reluctantly submits to this demand, and Andrew goes <br>
-                off to travel.
-
-                After Andrew departs, his father becomes irritable and cruel toward Mary, who accepts the <br>
-                cruelty with Christian forgiveness. Natasha is attracted to Anatole Kuragin, who confesses his <br>
-                love. She eventually decides that she loves Anatole and plans to elope with him, but the plan <br>
-                fails. Andrew comes home and rejects Natasha for her involvement with Anatole. Pierre <br>
-                consoles Natasha and feels an attraction toward her. Natasha falls ill.
-
-                In 1812, Napoleon invades Russia, and Tsar Alexander reluctantly declares war. Andrew returns <br>
-                to active military service. Pierre observes Moscow’s response to Napoleon’s threat and <br>
-                develops a crazy sense that he has a mission to assassinate Napoleon. The French approach <br>
-                the Bolkonski estate, and Mary and the old Prince Bolkonski (Andrew’s father) are advised to <br>
-                leave. The prince dies just as the French troops arrive. Mary, finally forced to leave her estate, <br>
-                finds the local peasants hostile. Nicholas happens to ride up and save Mary. Mary and Nicholas <br>
-                feel the stirrings of romance.
-
-                Pierre, after being liberated from the French, falls ill for three months. Upon recovering, he <br>
-                realizes his love for Natasha, which she reciprocates. Pierre and Natasha are married in 1813 <br>
-                and eventually have four children. Natasha grows into a solid, frumpy Russian matron. Nicholas <br>
-                weds Mary, resolving his family’s financial problems. He also rebuilds Mary’s family’s estate, <br>
-                which had been damaged in the war. Despite some tensions, Nicholas and Mary enjoy a happy <br>
-                family life.
-            </p>
+    
+        <div class= "box_about">
+            <h1> {{ post.title }} </h1>
+            <p>{{ post.content }}</p>
         </div>
 
     {% endblock content %}
