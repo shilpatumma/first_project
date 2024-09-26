@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+{% comment %} <!DOCTYPE html>  
 {% load static %}
 <html lang="en">  
 <head>  
@@ -10,9 +10,13 @@
     
 </head>  
 <body> 
+    <form method="POST">
+
+        
+        {% csrf_token %} {% endcomment %}
 
 {% comment %} header section start {% endcomment %}
-    <div class="container">        
+    {% comment %} <div class="container">        
         <div class="logo">
             <h1> ABC Tech </h1>
         </div>
@@ -43,47 +47,57 @@
             <i class="fa fa-twitter" aria-hidden="true" style="padding-right: 15px;"></i>
             <i class="fa fa-telegram" aria-hidden="true"></i>
         </div>      
-    </div>
+    </div> {% endcomment %}
 {% comment %} header section end {% endcomment %}
 
 
 
 {% comment %} form section start {% endcomment %}
 
-<div class="container_form">
-    <form class= "form">
+{% comment %} <div class="container_form"> {% endcomment %}
+    {% comment %} <form class= "form"> {% endcomment %}
 
-        <div class= "header_detail_box">        
+        {% comment %} <div class= "header_detail_box">        
 
             <div class= "book_header">
                 <h1> Book Entry Form </h1>
             </div> 
 
             <div class= "detail_box">
-                <label for="fname">First Name</label>
+                <label for="title">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
             
-                <label for="lname">Last Name</label>
+                <label for="content">Last Name</label>
                 <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-                <label for="book name">Book Name</label>
-                <input type="text" id="book name" name="book name" placeholder="Book Name..">
-            
-                <label for="author name">Author Name</label>
-                <input type="text" id="author name" name="author name" placeholder="Author Name..">            
-            
-                <input type="submit" value="Submit">
+                <label for="published_at">Email</label>
+                <input type="text" placeholder="Enter Email.." name="email" id="email">
+
+                <label for="author">Book Name - 1</label>
+                <input type="text" id="bookname" name="bookname" placeholder="Book Name.."> {% endcomment %}
+                
+                {% comment %} <button type="button" onclick=location.href="/post_home">Submit</button> {% endcomment %}
+
+                
+                    {% comment %} <button type="submit">
+                        Submit
+                    </button>
+                
+                </form>
+              
+                  
+
             </div>
-        </div>
-    </form>
-  </div>             
+        </div> {% endcomment %}
+    {% comment %} </form> {% endcomment %}
+  {% comment %} </div>              {% endcomment %}
 
 {% comment %} form section end {% endcomment %}
 
 
     
 {% comment %} footer content start {% endcomment %}
-<div class="footer">
+{% comment %} <div class="footer">
     
     <div class="icon1">
         <i class="fa fa-instagram" aria-hidden="true" style="padding-right: 15px;"></i>
@@ -100,8 +114,94 @@
         <h1> ABC Tech </h1>
     </div>
     
-</div>
+</div> {% endcomment %}
 
 {% comment %} footer content end {% endcomment %}
-</body>  
-</html>  
+{% comment %} </body>  
+</html>   {% endcomment %}
+
+
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>FORM</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <form method="POST" action="{% url 'new_post' %}">  <!-- Ensure this points to the correct URL -->
+        {% csrf_token %}
+
+        <div class="container">
+            <div class="logo">
+                <h1>ABC Tech</h1>
+            </div>
+
+            <div class="navbar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Blog <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Blog 1</a>
+                        <a href="#">Blog 2</a>
+                        <a href="#">Blog 3</a>
+                    </div>
+                </div>
+                <a href="#news">Contact</a>
+            </div>
+
+            <div class="icon">
+                <i class="fa fa-instagram" aria-hidden="true" style="padding-right: 15px;"></i>
+                <i class="fa fa-facebook-official" aria-hidden="true" style="padding-right: 15px;"></i>
+                <i class="fa fa-twitter" aria-hidden="true" style="padding-right: 15px;"></i>
+                <i class="fa fa-telegram" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="container_form">
+            <div class="header_detail_box">
+                <div class="book_header">
+                    <h1>Book Entry Form</h1>
+                </div>
+
+                <div class="detail_box">
+                    <label for="fname">Title</label>
+                    <input type="text" id="fname" name="fname" placeholder="Your title.." required>
+
+                    <label for="lname">Content</label>
+                    <input type="text" id="lname" name="lname" placeholder="Your content.." required>
+
+                    <label for="published_at">Published At</label>
+                    <input type="datetime-local" name="published_at" id="published_at" required>
+
+                    <label for="bookname">Author</label>
+                    <input type="text" id="bookname" name="bookname" placeholder="Author name.." required>
+
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="icon1">
+                <i class="fa fa-instagram" aria-hidden="true" style="padding-right: 15px;"></i>
+                <i class="fa fa-facebook-official" aria-hidden="true" style="padding-right: 15px;"></i>
+                <i class="fa fa-twitter" aria-hidden="true" style="padding-right: 15px;"></i>
+                <i class="fa fa-telegram" aria-hidden="true"></i>
+            </div>
+            <div class="name">
+                <p>Home About Blog Contact</p>
+            </div>
+            <div class="logo-container1">
+                <h1>ABC Tech</h1>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -18,18 +18,18 @@ from django.db import models
 
 
 
-# from django.utils import timezone
-# class Post(models.Model):
-#     title = models.CharField(max_length=50)
-#     content = models.TextField()
-#     published_at = models.DateTimeField(default = timezone.now)
-#     author = models.CharField(max_length=50, default=False)
+from django.utils import timezone
+class Post(models.Model):
+    title = models.CharField(max_length=50)
+    content = models.TextField()
+    published_at = models.DateTimeField(default = timezone.now)
+    author = models.CharField(max_length=50, default=False)
 
-#     def __str__(self):
-#         return self.title
+    def __str__(self):
+        return self.title
 
-#     def get_absolute_url(self,):
-#         return f"/post/{self.id}"
+    def get_absolute_url(self,):
+        return f"/post/{self.id}"
     
 
 
