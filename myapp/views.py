@@ -71,6 +71,7 @@ from django.shortcuts import render, get_object_or_404
 
 
 from .models import Post
+from . import forms
 
 def post_home(request):
     posts = Post.objects.all()
@@ -79,44 +80,18 @@ def post_home(request):
 def post_about(request, id):
     post = get_object_or_404(Post, id = id)
     return render(request, 'blog/post_about.html', {'post': post})
-    
-# # def layout(request):
-# #     return render(request, "blog/layout.html")
-# def new_post(request):
-#     if request.method =='POST':
-#        title=request.POST.get("fname")
-#        content=request.POST.get("lname")
-#        published_at=request.POST.get("email")
-#        author=request.POST.get("bookname")
-       
-#        if title and content and published_at and author:
 
-#             Post.objects.create(title = title, content = content, published_at = published_at, author = author)
-#             return redirect("post_home")
-#        return render(request, "form.html")
+def new(request):
+    return render(request, 'blog/new.html')
 
 
-def form(request):
-    return render(request, "blog/form.html")
-
-
-
-def new_post(request):
+def post_new(request):
     if request.method == 'POST':
-        title = request.POST.get("fname")
-        content = request.POST.get("lname")
-        published_at = request.POST.get("published_at")  # Update this line
-        author = request.POST.get("bookname")
-        
-        if title and content and published_at and author:
-            Post.objects.create(
-                title=title, 
-                content=content, 
-                published_at=published_at,  # Make sure the format is correct
-                author=author
-            )
-            return redirect("post_home")
-        else:
-            return render(request, "blog/form.html", {"error": "All fields are required."})
-
-    return render(request, "blog/form.html")
+        form = forms.CreatePost(request.POST, request.FILES)
+        # if form.is_valid():
+        #     newpost = form.save(commit = False)
+        #     newpost.author = request.uesr
+        return redirect('myapp:list')
+    else:
+        form = forms.CreatePost()
+        return render(request, 'blog/post_home.html', { 'form': form })

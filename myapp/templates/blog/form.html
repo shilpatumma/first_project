@@ -122,7 +122,7 @@
 
 
 
-
+{% comment %} 
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -130,12 +130,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>FORM</title>
+    <title> FORM </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
-    <form method="POST" action="{% url 'new_post' %}">  <!-- Ensure this points to the correct URL -->
+    <form method="post" action="{% url 'posts:new_post' %}">  <!-- Ensure this points to the correct URL -->
         {% csrf_token %}
+        {{ form }}
 
         <div class="container">
             <div class="logo">
@@ -164,6 +166,8 @@
             </div>
         </div>
 
+        
+
         <div class="container_form">
             <div class="header_detail_box">
                 <div class="book_header">
@@ -188,6 +192,8 @@
             </div>
         </div>
 
+
+
         <div class="footer">
             <div class="icon1">
                 <i class="fa fa-instagram" aria-hidden="true" style="padding-right: 15px;"></i>
@@ -204,4 +210,7 @@
         </div>
     </form>
 </body>
-</html>
+</html> {% endcomment %}
+
+
+

@@ -1,4 +1,5 @@
 {% extends 'blog/layout.html' %}
+
 {% block title %}
     Post Home page
 {% endblock %}
@@ -7,24 +8,23 @@
         <div class= "box">
             <h1>My Posts</h1>
 
-            {% for post in posts %}
+                {% for post in posts %}
 
-            <article class="post">
-            <h2>
-                {% if post.slug %}
-                        {{ post.title }}
-                    
-                {% else %}
-                    <a href= "{{post.get_absolute_url}}">
-                        {{ post.title }}
-                    </a>
-                {% endif %}
-            </h2>
+                    <article class="post">
+                        <h2>
+                            {% if post.slug %}
+                                    {{ post.title }}
+                                
+                                {% else %}
+                                    <a href= "{{post.get_absolute_url}}">
+                                        {{ post.title }}
+                                    </a>
+                                {% endif %}
+                        </h2>
 
-            <h3>Published on {{ post.published_at | date:"M d, Y" }} by {{ post.author | title}}</h3>
-            {% comment %} <p>{{ post.content }}</p> {% endcomment %}
-            </article>
+                        <h3>Published on {{ post.published_at | date:"M d, Y" }} by {{ post.author | title}}</h3>
+                    </article>
 
-            {% endfor %}    
+                {% endfor %}    
         </div>
     {% endblock content %}

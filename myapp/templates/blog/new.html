@@ -1,0 +1,16 @@
+{% comment %} {% extends 'layout.html' %} {% endcomment %}
+
+{% block title %}
+Form 
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1> New Post </h1>
+        <form class= "form" action = "{% url 'myapp:new_post' %}" method = 'post'> 
+            {% csrf_token %}
+            {{ form }}
+            <button class= "form-submit">Add Post</button>
+        </form>
+    </section>
+{% endblock %}
